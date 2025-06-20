@@ -1,10 +1,13 @@
 package ru.it_arch.k3dm
 
-public sealed interface ValueObject : Kddd {
+public sealed interface ValueObject : Fts {
+
+    /** Math neutral or default */
+    public val neutral: ValueObject
 
     /** For `data class` */
     public interface Data : ValueObject {
-        public fun <T: Kddd, A: Kddd> fork(vararg args: A): T
+        public fun <T: Fts, A: Fts> fork(vararg args: A): T
     }
 
     /** For `value class` */

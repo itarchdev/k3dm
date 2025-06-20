@@ -5,11 +5,14 @@ kotlin = "2.1.21"
 ksp = "2.1.21-2.0.1"
 #ksp = "1.9.0-1.0.13"
 kotlinpoet = "2.2.0"
-
+vanniktech ="0.32.0"
 # libs
 kotlinx-coroutines = "1.9.0"
 ktlint = "0.50.0"
 serialization-json = "1.8.1"
+git-changelog = "3.0.6"
+
+k3dm = "0.0.9"
 
 # test
 junit = "4.13.2"
@@ -31,6 +34,9 @@ kotlinpoet = { module = "com.squareup:kotlinpoet", version.ref = "kotlinpoet" }
 kotlinpoet-ksp = { module = "com.squareup:kotlinpoet-ksp", version.ref = "kotlinpoet" }
 kotlin-compile-testing-ksp = { module = "com.github.tschuchortdev:kotlin-compile-testing-ksp", version = "1.6.0" }
 
+# my
+k3dm = { module = "ru.it-arch:k3dm", version.ref = "k3dm" }
+
 # test
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 kotest = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotest" }
@@ -45,5 +51,9 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 # https://github.com/monnage/gradle-test-report
 test-report = { id = "com.monnage.test-report", version.ref = "test-report" }
 kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
+
+# https://vanniktech.github.io/gradle-maven-publish-plugin/central/
+vanniktech = { id = "com.vanniktech.maven.publish", version.ref = "vanniktech" }
+git-changelog = { id = "se.bjurr.gitchangelog.git-changelog-gradle-plugin", version.ref = "git-changelog" }
 
 versions = { id = "com.github.ben-manes.versions", version = "0.52.0" }

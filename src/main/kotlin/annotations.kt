@@ -43,15 +43,6 @@ public annotation class KDParsable(
 @MustBeDocumented
 public annotation class KDSerialName(val value: String)
 
-/**
- * Определяет, что в генерируемой доменной имплементации, тил свойства используется как есть — без оборачивания в `value class` */
-/* TODO: А оно нужно?
-@Target(AnnotationTarget.PROPERTY)
-@Retention(AnnotationRetention.BINARY)
-@MustBeDocumented
-public annotation class AsIs
-*/
-
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.BINARY)
 @MustBeDocumented
