@@ -21,7 +21,6 @@ mavenPublishing {
     coordinates("$group", name, "$version")
     // publishToMavenCentral(SonatypeHost.DEFAULT)
     // or when publishing to https://central.sonatype.com/
-    // Библиотека базовых типов, предназначенная для построения доменных моделей на языке Котлин согласно с тактическими DDD-паттернами Entity и Value Object.
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     signAllPublications()
 }
