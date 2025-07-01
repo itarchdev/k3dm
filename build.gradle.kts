@@ -1,6 +1,5 @@
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
-import com.vanniktech.maven.publish.SonatypeHost
 
 plugins {
     alias(libs.plugins.kotlin.jvm)
@@ -21,7 +20,7 @@ mavenPublishing {
     coordinates("$group", name, "$version")
     // publishToMavenCentral(SonatypeHost.DEFAULT)
     // or when publishing to https://central.sonatype.com/
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    publishToMavenCentral()
     signAllPublications()
 }
 
