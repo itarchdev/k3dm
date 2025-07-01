@@ -10,7 +10,7 @@ package ru.it_arch.k3dm
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.BINARY)
 @MustBeDocumented
-public annotation class KDGeneratable(
+public annotation class Generatable(
     val implementationName: String = "",
     val dsl: Boolean = true,
     val json: Boolean = false,
@@ -26,7 +26,7 @@ public annotation class KDGeneratable(
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.BINARY)
 @MustBeDocumented
-public annotation class KDParsable(
+public annotation class Parsable(
     val serialization: String = "toString()",
     val deserialization: String = "",
     val useStringInDsl: Boolean = false,
@@ -41,12 +41,20 @@ public annotation class KDParsable(
 @Target(AnnotationTarget.PROPERTY)
 @Retention(AnnotationRetention.BINARY)
 @MustBeDocumented
-public annotation class KDSerialName(val value: String)
+public annotation class SerialName(val value: String)
 
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.BINARY)
 @MustBeDocumented
-public annotation class KDIgnore
+public annotation class Ignore
+
+/**
+ * Определяет нейтральный элемент типа. Генерируется значение по умолчанию `DEFAULT`.
+ * */
+@Target(AnnotationTarget.PROPERTY)
+@Retention(AnnotationRetention.BINARY)
+@MustBeDocumented
+public annotation class Neutral
 
 /**
  * Грязный хак для генерации аннотации @OptIn(ExperimentalSerializationApi::class).
@@ -63,4 +71,3 @@ public annotation class KDIgnore
 @Retention(AnnotationRetention.BINARY)
 @MustBeDocumented
 public annotation class OptIn(val markerClass: String)
-

@@ -7,6 +7,16 @@ Tepex <tepex@mail.ru>
 
 K3DM (Kotlin DDD Model) — библиотека базовых типов, предназначенная для построения <<domain-model,моделей предметных областей>> на языке Котлин согласно с тактическими _DDD_-патернами — _Entity_ и _Value Object_. Состоит из конечной (закрытой) <<fst,*ФСТ*>>, аннотаций // и регламента построения <<cdt,*CDT*>>.
 
+== Установка
+image:https://img.shields.io/maven-central/v/ru.it-arch/k3dm[Maven Central Version]
+
+[source,kotlin]
+----
+dependencies {
+    implementation("ru.it-arch:k3dm:<latest_version>")
+}
+----
+
 == Функциональные требования
 
 === Конечность
@@ -17,9 +27,6 @@ K3DM (Kotlin DDD Model) — библиотека базовых типов, пр
 
 === Value Object
 Предполагает свою иммутабельность. Однако, для операций над типами необходим механизм изменения свойств типа. _Entity_ пре
-
-
-
 
 == Мотивация
 [quote,Закон Е. А. Седова]
@@ -61,9 +68,12 @@ K3DM (Kotlin DDD Model) — библиотека базовых типов, пр
 
 [#annotations]
 == Аннотации
-- `KDGeneratable`
-- `KDParsable`
-- `KDIgnore`
+- `Generatable`
+- `Parsable`
+- `SerialName`
+- `Ignore`
+- `Neutral`
+- `OptIn`
 
 [glossary]
 [#domain-model]
