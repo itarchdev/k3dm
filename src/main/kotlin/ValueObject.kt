@@ -2,9 +2,6 @@ package ru.it_arch.k3dm
 
 public sealed interface ValueObject : Fts {
 
-    /** Math neutral or default */
-    public val neutral: ValueObject
-
     /** For `data class` */
     public interface Data : ValueObject {
         public fun <T: Fts, A: Fts> fork(vararg args: A): T
@@ -20,7 +17,7 @@ public sealed interface ValueObject : Fts {
          * Имеет тот же смысл, что и метод `copy()` у `data class`. Обусловлен необходимостью создовать объект на
          * уровне абстракции, чтобы иметь возможность писать логику, еще до генерации имплементации.
          * */
-        public fun <T : Value<BOXED>> fork(boxed: BOXED): T
+        public fun <T : Value<BOXED>> apply(boxed: BOXED): T
     }
 
     /** For `enum class`, `sealed interface` */
