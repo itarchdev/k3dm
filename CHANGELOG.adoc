@@ -1,0 +1,27 @@
+= Changelog
+Tepex <tepex@mail.ru>
+1.0, 1/VII-2025
+
+В данном документе фиксируются все значимые изменения в проекте. Формат данного документа оприрается на https://keepachangelog.com/ru/1.1.0/[Keep a Changelog].
+
+== Новое
+
+== 2.0.1 — 2025-07-02
+=== Добавлено
+* Аннотация `@Neutral`
+
+=== Изменено
+* Переименованы аннотации:
+** `KDGeneratable` -> `Generatable`
+** `KDParsable` -> `Parsable`
+** `KDSerialName` -> `SerialName`
+** `KDIgnore` -> `Ignore`
+* Переименован метод `fork()` -> `apply()` в интерфейсе link:src/main/kotlin/ValueObject.kt[`ValueObject.Value`]
+* Обновлена документация по новым именам аннотаций в link:README.adoc[README]
+* Обновление версий зависимостей:
+** Gradle: 8.14.2 -> 9.0.0-rc-1
+** Kotlin: 2.1.21 -> 2.2.0
+** vanniktech: 0.32.0 -> 0.33.0
+
+=== Удалено
+* Поле `neutral` из интерфейса link:src/main/kotlin/ValueObject.kt[`ValueObject`]
