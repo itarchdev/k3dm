@@ -16,6 +16,7 @@ dependencies {
     implementation("ru.it-arch:k3dm:<latest_version>")
 }
 ----
+// release: ./gradlew publishAndReleaseToMavenCentral --no-configuration-cache
 
 == Функциональные требования
 

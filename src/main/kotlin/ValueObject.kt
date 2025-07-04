@@ -4,7 +4,7 @@ public sealed interface ValueObject : Fts {
 
     /** For `data class` */
     public interface Data : ValueObject {
-        public fun <T: Fts, A: Fts> fork(vararg args: A): T
+        public fun <T: Data> fork(vararg args: Any?): T
     }
 
     /** For `value class` */
