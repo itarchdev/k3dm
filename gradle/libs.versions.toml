@@ -1,7 +1,7 @@
 [versions]
 # plugins
-kotlin = "2.2.0"
-vanniktech ="0.33.0"
+kotlin = "2.2.21"
+vanniktech ="0.34.0"
 # libs
 ktlint = "0.50.0"
 
@@ -28,4 +28,4 @@ kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
 
 # https://vanniktech.github.io/gradle-maven-publish-plugin/central/
 vanniktech = { id = "com.vanniktech.maven.publish", version.ref = "vanniktech" }
-versions = { id = "com.github.ben-manes.versions", version = "0.52.0" }
+versions = { id = "com.github.ben-manes.versions", version = "0.53.0" }
