@@ -1,7 +1,7 @@
 [versions]
 # plugins
-kotlin = "2.2.21"
-vanniktech ="0.34.0"
+kotlin = "2.3.10"
+vanniktech ="0.36.0"
 # libs
 ktlint = "0.50.0"
 
