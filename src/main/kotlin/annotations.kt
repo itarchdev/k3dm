@@ -50,11 +50,22 @@ public annotation class Ignore
 
 /**
  * Определяет нейтральный элемент типа. Генерируется значение по умолчанию `DEFAULT`.
+ * Для [ValueObject.Value] задаются параметры [name], [value] из которых будет сгенерировано
+ * нейтральное свойство.
+ * Для [ValueObject.Data] задается параметр [name]. Нейтральное свойство генерируется, если все
+ * свойства [ValueObject.Data] имеют нейтральные свойства.
+ * Для data object внутри sealed параметры не используются и не указываются.
+ *
+ * @property name имя свойства для нейтрального значения
+ * @property value строковое представление нейтрального значения
  * */
-@Target(AnnotationTarget.PROPERTY)
+@Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.BINARY)
 @MustBeDocumented
-public annotation class Neutral
+public annotation class Neutral(
+    val name: String = "DEFAULT",
+    val value: String = ""
+)
 
 /**
  * Грязный хак для генерации аннотации @OptIn(ExperimentalSerializationApi::class).

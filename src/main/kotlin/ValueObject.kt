@@ -3,10 +3,10 @@ package ru.it_arch.k3dm
 public sealed interface ValueObject : Fts {
 
     /** For `data class` */
-    public interface Data : ValueObject
+    public interface Data : ValueObject, Validatable
 
     /** For `value class` */
-    public interface Value<BOXED : Any> : ValueObject {
+    public interface Value<BOXED : Any> : ValueObject, Validatable {
         public val boxed: BOXED
 
         /**
@@ -19,5 +19,5 @@ public sealed interface ValueObject : Fts {
     }
 
     /** For `enum class`, `sealed interface` */
-    public interface Sealed : ValueObject
+    public interface Adt : ValueObject
 }
